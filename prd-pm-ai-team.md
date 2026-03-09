@@ -1,16 +1,15 @@
-# Multi-Agent PM AI Team
+# Working Backwards AI — Multi-Agent PM Team
 
 **Author:** [name]
 **Status:** Draft
-**Last Updated:** 2026-03-07
+**Last Updated:** 2026-03-08
 **Target Release:** [milestone]
 
 ---
 
-> **Working Backwards note:** This PRD follows Amazon's Working Backwards methodology.
-> The Press Release and FAQ sections were written first — before any requirements.
-> If the press release isn't compelling, the product isn't worth building.
-> If the FAQ reveals unanswerable questions, the product isn't ready to design.
+> This PRD is itself written Working Backwards.
+> The Press Release and FAQ were written first.
+> The requirements follow from them — not the other way around.
 
 ---
 
@@ -18,53 +17,57 @@
 
 **FOR IMMEDIATE RELEASE**
 
-### [Company] Launches [ProductName]: The AI-Powered PM Team That Makes Consistent Quality the Default
+### Introducing [ProductName]: The AI Team That Makes You Start With the Customer — Every Time
 
-*Any product manager can now produce senior-quality PRDs, roadmaps, research syntheses, and stakeholder updates — every time, regardless of experience level.*
+*PM teams can now run Amazon's Working Backwards process for any product idea in under an hour, with an AI team that won't let them skip the hard parts.*
 
-**[City], March 2026** — [Company] today announced [ProductName], a multi-agent AI system that gives every PM access to a full product management team: a Researcher, a Strategist, a Spec Writer, a Communicator, and a Critic that reviews every output before it reaches you.
+**[City], March 2026** — [Company] today announced [ProductName], a multi-agent AI system that guides product managers through Amazon's Working Backwards methodology — from a raw idea to a validated Press Release, External FAQ, Internal FAQ, and engineer-ready requirements — without letting anyone cut corners.
 
-For the first time, the quality of PM artifacts is determined by the process — not the person.
+Most product teams jump straight to solutions. They write requirements for features that haven't been validated. They build products customers didn't ask for. They discover the hard questions — from engineering, from leadership, from legal — only after the build has started.
 
-**The problem:** Today, the quality of a PRD, roadmap, or stakeholder update depends almost entirely on the individual who wrote it. Two PMs at the same company, working on similar features, produce artifacts of wildly different quality. Engineers spend hours in clarification loops on underspecified requirements. Roadmap decisions get relitigated because the strategy wasn't clearly articulated. Senior PMs rewrite junior PMs' work instead of doing strategic work. There is no organizational standard — just variance.
+Working Backwards was designed to prevent exactly this. But doing it rigorously is hard. Writing a compelling Press Release for a product that doesn't exist yet is a skill. Anticipating every question a skeptical engineer or CFO will ask requires experience. Most teams know they should do it, and most teams don't.
 
-**How it works:** A PM describes their task in plain language — no templates, no forms. An Orchestrator agent routes the request to the right specialists. The Researcher synthesizes evidence and frames the problem. The Strategist builds the rationale and surfaces trade-offs. The Spec Writer drafts the artifact with full acceptance criteria and edge cases. The Communicator tailors updates for each audience. Before any output reaches the PM, a Critic agent evaluates it against a versioned quality rubric and requires targeted revisions until it passes. The PM receives a finished, review-ready artifact — not a starting point.
+[ProductName] makes it unavoidable.
 
-**"We built [ProductName] because the best PM teams had unwritten standards in their heads and no way to scale them. [ProductName] makes the standard explicit, enforces it automatically, and raises the floor for every person on the team."** — [Spokesperson Name, Title, Company]
+A PM describes an idea in plain language. A Press Release Agent helps them articulate it from the customer's perspective — who has the problem, what the product does, why it matters — until it's genuinely compelling. A FAQ Agent then stress-tests the PR with the hardest questions customers and internal stakeholders would ask, and won't move on until those questions are answered. Only once the PR and FAQ pass a Critic Agent's review does the system unlock the Requirements stage, where a Requirements Agent translates the validated narrative into engineer-ready specifications.
 
-**Getting started:** [ProductName] is available via [API / CLI / web]. PM teams can [onboarding path]. [Pricing or access details.]
+The result is not just a better PRD. It's a product that was worth building before anyone wrote a line of code.
 
-**"I used to spend the first hour of every sprint cycle rewriting requirements before sharing them with engineering. Now I describe what I need and get back something I'd actually be proud to send. The Critic catches things I'd have missed on a busy day."** — [PM Name, Title, Company]
+**"Most PM tools help you write faster. [ProductName] helps you think better. There's a big difference between a PM who can type and a PM who can tell you clearly who the customer is, what they need, and why this is the right solution. [ProductName] closes that gap."** — [Spokesperson Name, Title]
+
+[ProductName] is available via [API / CLI / web]. PM teams can get started at [URL]. [Pricing or access details.]
+
+**"We'd been trying to run Working Backwards for two years. The process always fell apart at the FAQ stage — we'd answer the easy questions and declare victory. [ProductName] kept asking the hard ones until we actually had answers. The resulting requirements were the clearest we've ever shipped to engineering."** — [PM Lead, Company]
 
 ---
 
 ## External FAQ
 
-*Questions a PM or PM team lead would ask before adopting this.*
+*Questions a PM or PM team lead would ask before adopting [ProductName].*
 
-**Q: Does this replace product managers?**
-No. [ProductName] handles artifact production — the writing, structuring, and quality-checking of PM outputs. It does not replace the judgment, customer relationships, strategy, and prioritization decisions that make a great PM. It removes the low-value work so PMs can focus on the high-value work.
+**Q: Why Working Backwards specifically? Why not another PM methodology?**
+Working Backwards is the most rigorous customer-first framework in practice at scale. The Press Release discipline — writing the product announcement before building the product — forces clarity that no template or ticket system achieves. We picked one methodology and built the entire product around it rather than building a generic AI assistant that produces mediocre output for everything.
 
-**Q: How does it handle domain knowledge specific to my product or industry?**
-You provide the context. The agents work from what you give them — customer quotes, research, backlog items, strategic goals. They structure, synthesize, and critique. They do not invent domain knowledge they don't have. If input is thin, agents flag the gaps rather than hallucinate.
+**Q: Do I have to know Working Backwards before using this?**
+No. The agents guide you through each stage with questions and context. If you've never written a Press Release for an unbuilt product before, the Press Release Agent will teach you the format and push back on vague answers. The methodology is embedded in the process.
 
-**Q: What if the output is wrong or doesn't reflect what I intended?**
-The system is designed for iteration, not one-shot delivery. Every artifact comes back with a visible Critic review showing what passed and what was revised. You edit the output directly. For v1, the PM always reviews and owns the final artifact.
+**Q: Can I skip the Press Release and go straight to requirements?**
+No. This is intentional. The pipeline enforces stage order: Press Release → External FAQ → Internal FAQ → Requirements. If you could skip the PR, you'd be back to writing requirements for an unvalidated idea. The whole point is to prevent that.
 
-**Q: How do I get my engineering team to trust AI-generated requirements?**
-The PRDs [ProductName] produces follow a defined structure with explicit acceptance criteria, edge cases, and non-functional requirements. Engineers can see exactly what the artifact contains and what's marked `[OPEN]`. The format is consistent — which builds trust faster than one-off documents of varying quality.
+**Q: What if my Press Release isn't compelling? Does the system tell me not to build the product?**
+Yes — or at least, it tells you clearly that the PR isn't passing and why. A Press Release that can't be made compelling is a signal that the product idea, the customer definition, or the problem statement needs more work. The system doesn't make the build/no-build decision — but it makes the evidence visible.
 
-**Q: Can I customize the quality bar for my team's specific standards?**
-[OPEN] v1 ships with a single org-wide rubric. Per-team customization is being evaluated for v2.
+**Q: What does the output look like?**
+A complete Working Backwards package in markdown: (1) a validated Press Release, (2) External FAQ with answers, (3) Internal FAQ with answers, (4) engineer-ready requirements with acceptance criteria, edge cases, and non-functional requirements. Ready to drop into your doc system or repo.
 
-**Q: What formats does it output?**
-Structured markdown compatible with Notion, Confluence, Linear, and standard doc systems. Direct integrations are planned for Phase 2.
+**Q: How long does the full process take?**
+Target: under an hour for a well-scoped feature idea. The Press Release stage is typically the longest — 20-30 minutes — because it requires real thinking. FAQ and Requirements flow faster once the PR is locked.
 
-**Q: How do I handle confidential product information?**
-Your data is processed via your own Anthropic API key. [ProductName] does not store inputs or outputs beyond the session. [Additional data handling details TBD based on deployment model.]
+**Q: What if I already have a draft Press Release or some research?**
+Paste it in. The agents work from what you provide. If you have a strong PR draft, the Press Release Agent validates and refines rather than starting from scratch. If you have customer quotes or research, the FAQ Agent uses them as evidence.
 
-**Q: How long does it take to produce an artifact?**
-Target: under 60 seconds for a standard PRD from a 2,000-token input. Longer for research synthesis with large input corpora.
+**Q: Does this work for internal tools and infrastructure, not just customer-facing products?**
+Yes. The "customer" in the Press Release can be an internal team. The methodology applies equally — "we are building X for engineers who need Y" is a perfectly valid Press Release premise.
 
 ---
 
@@ -72,262 +75,259 @@ Target: under 60 seconds for a standard PRD from a 2,000-token input. Longer for
 
 *Questions from engineering, leadership, legal, and go-to-market teams.*
 
-**Q: Why build this now? Why hasn't this been done already?**
-Multi-agent systems capable of producing coherent, long-form professional documents have only become reliable at the quality bar required in the last 12-18 months. Earlier attempts at AI writing tools produced drafts that required as much editing as writing from scratch. The combination of strong instruction-following models, structured output, and a critique loop changes the quality equation enough to make this viable.
+**Q: Why build this as a multi-agent system instead of a single model with a long prompt?**
+Each Working Backwards stage has distinct goals and failure modes. The Press Release Agent's job is to make a narrative compelling. The FAQ Agent's job is to be adversarial — to find the questions that will sink the product if left unanswered. The Critic's job is to evaluate objectively without the bias of having written the artifact. Conflating these roles in a single prompt produces worse output and makes it impossible to tune specific stages. Separation also enables different model tiers per role and cleaner observability.
 
-**Q: Why multi-agent instead of a single powerful model?**
-A single model call could produce a PRD draft, but it conflates roles that benefit from separation: the Researcher's job is to question evidence; the Spec Writer's job is to write; the Critic's job is to find gaps. Keeping these roles distinct produces better outputs and makes the system easier to tune. It also allows different model tiers per role (cost optimization) and makes failure modes easier to debug.
+**Q: Why enforce stage sequencing instead of letting PMs work flexibly?**
+Because flexibility is how teams skip the hard parts. If the system allowed jumping to requirements, most PMs would. The stage gate is the product. Without it, [ProductName] is just another AI writing tool.
 
-**Q: Why build on Claude / Anthropic vs. other models?**
-Claude's instruction-following, structured output reliability, and long context handling are best-in-class for this type of document-heavy, multi-step task. The Anthropic SDK provides the agent primitives we need without custom infrastructure.
+**Q: What are the biggest risks to this product?**
+1. **PM resistance to the gated process.** If PMs find the stage gates frustrating rather than valuable, they'll stop using it. Mitigation: the quality of the Critic's feedback is everything — it must be specific, fair, and educational, not bureaucratic.
+2. **Critic calibration.** A Critic that's too strict creates infinite revision loops. A Critic that's too lenient produces rubber-stamp approvals. Rubric calibration against real PM artifacts before launch is essential.
+3. **PR stage bottleneck.** If PMs consistently get stuck at the Press Release stage, the product feels hard rather than helpful. Mitigation: the Press Release Agent must be genuinely collaborative — asking good questions, offering examples, not just pointing out what's wrong.
 
-**Q: What does v1 include vs. later phases?**
-v1: Orchestrator + 4 worker agents + Critic, supporting PRDs, roadmaps, research syntheses, and stakeholder updates. Markdown output. No persistent state, no integrations.
-Phase 2: Tool integrations (Notion, Jira, Linear), per-team rubric customization, session history.
-Phase 3: Analytics, fine-tuning, publishing automation.
+**Q: How does the system prevent PMs from gaming the Critic?**
+It can't prevent deliberate gaming, but the Critic evaluates substance, not form. A PR that uses the right words but doesn't clearly identify a customer or a specific problem will fail. The rubric checks for evidence and specificity, not keyword matching.
 
-**Q: What are the biggest technical risks?**
-1. **Latency:** 3-4 sequential LLM calls to produce a single artifact. If any call is slow, the 60-second target slips. Mitigation: parallelize where possible; use faster models for lower-stakes steps.
-2. **Critic calibration:** A poorly calibrated rubric produces noisy feedback that degrades output rather than improving it. Mitigation: test rubric against a set of known-good and known-bad PM artifacts before launch.
-3. **Hallucination in research synthesis:** The Researcher must not invent data. Mitigation: explicit prompting + Critic check for unsupported claims.
+**Q: What's the build plan?**
+v1: Orchestrator + Press Release Agent + FAQ Agent + Requirements Agent + Critic. Stage-gated pipeline. Markdown output. Built on the Anthropic SDK.
+Phase 2: Doc system integrations (Notion, Confluence, Linear). Session persistence. Per-team Critic rubric customization.
+Phase 3: Analytics (which stages take longest, which teams produce the strongest PRs). Team-level Working Backwards coaching.
 
-**Q: What are the biggest adoption risks?**
-1. **PM trust:** PMs may be reluctant to share AI-generated artifacts with engineering teams. Mitigation: position as a drafting tool the PM edits and owns, not a replacement author.
-2. **Rubric legitimacy:** If the quality rubric doesn't match what PMs and engineers consider "good," the Critic's PASS rating is meaningless. Mitigation: co-develop the rubric with target PM teams before launch.
-3. **Input friction:** If PMs have to provide too much structured input upfront, adoption drops. Mitigation: natural language input is required; the agents ask clarifying questions rather than demanding a form.
-
-**Q: How do we measure success?**
-See Success Criteria section. The most important leading indicator is weekly active usage by the 3 launch teams within 90 days. Artifact quality and time savings are measured post-launch via rubric scores and PM self-report.
-
-**Q: Who are the first 3 teams we're targeting for launch?**
-[OPEN] — needs to be identified. Ideal launch team profile: mid-size PM org (5-15 PMs), already has a pain point around PRD quality or onboarding new PMs, has an internal champion willing to give structured feedback.
+**Q: What's the go-to-market motion? Who are the first teams?**
+[OPEN] — needs to be identified. Ideal launch team profile: PM team that has tried Working Backwards before, knows the methodology's value, and is frustrated by inconsistent execution. An internal champion is required.
 
 **Q: What's the business model?**
-[OPEN] — not in scope for this PRD. Requires separate decision.
+[OPEN] — separate decision, not in scope for this PRD.
 
 ---
 
 ## Problem
 
-PM teams produce inconsistent output. The quality of a PRD, roadmap, or stakeholder update depends almost entirely on the individual PM who wrote it — their experience, their templates, their judgment on any given day. There is no organizational standard for what "good" looks like, and no mechanism to enforce it at scale.
+Most product teams skip the hard thinking. They jump from idea to requirements, from requirements to build, discovering the unanswered questions — from customers, from engineering, from leadership — only after significant time has been invested.
 
-The consequences are real:
+Working Backwards was designed to fix this. By writing the Press Release and FAQ before any design or engineering begins, teams are forced to answer the hard questions while changing course is still cheap. Amazon has run this process for decades. It works.
 
-- Engineers waste time in clarification loops on underspecified requirements
-- Roadmap decisions get relitigated because strategy wasn't clearly articulated upfront
-- Stakeholder updates vary so widely in depth and format that leadership can't make reliable cross-team comparisons
-- Senior PMs spend disproportionate time reviewing and rewriting junior PMs' work rather than doing strategic work
+But doing it rigorously is hard. Writing a genuinely compelling Press Release for a product that doesn't exist requires skill and discipline most PMs haven't developed. Anticipating every hard question from every stakeholder requires experience. The FAQ stage in particular collapses under pressure — teams answer the easy questions and move on. Without a mechanism to enforce rigor, Working Backwards becomes a checkbox, not a discipline.
 
-This is not a hiring problem — it's a process problem. PM teams lack a consistent, repeatable system for producing high-quality artifacts. As teams scale, the variance compounds.
+The result: PRDs that start with requirements instead of customers. Products that solve the wrong problem. Engineering cycles wasted on features that didn't need to be built.
 
-**What happens if we do nothing:** PM output quality remains tied to individual skill. Onboarding new PMs takes longer. Engineering efficiency suffers from ambiguous requirements. The PM org becomes a bottleneck rather than a multiplier.
+**What happens if we do nothing:** PM teams continue producing artifacts that vary by individual skill. Engineering waste from underspecified or wrongly-specified features continues. Working Backwards remains something teams "try to do" rather than something they actually do.
 
 ---
 
 ## Success Criteria
 
-- 80% of PM artifacts produced with agent assistance meet the quality rubric on first Critic review, within 60 days of a team's first use
-- Time spent on PM artifact production (PRDs, roadmap docs, stakeholder updates) decreases by ≥40% for teams using the system, measured via PM self-report at 30 days
+- 80% of Working Backwards packages produced with the system receive a PASS from the Critic at the Requirements stage within 90 minutes of the PM starting
+- PMs who complete the full pipeline report that the process changed or sharpened their thinking (not just produced an output) — measured via post-session survey, target: ≥4/5
+- Engineering teams receiving requirements produced by the system report fewer clarification requests compared to previous PM artifacts — target: ≥30% reduction, measured at 60 days
 - At least 3 PM teams with weekly active usage within 90 days of launch
-- PM teams report higher confidence in artifact quality vs. their unassisted workflow (post-session survey, target: ≥4/5)
-- Zero "I would not send this to engineering" ratings from PM reviewers on Critic-passed artifacts
+- Zero completed packages where the Press Release was not authored before the Requirements
 
 ---
 
 ## User Journey
 
-### Writing a PRD
+A PM has an idea for a new feature: *"I want to build a bulk export tool for enterprise customers."*
 
-1. PM opens the system and describes a feature or problem in natural language — no template required
-2. Orchestrator classifies the task as spec writing and activates the Researcher and Spec Writer agents
-3. Researcher asks up to 3 clarifying questions: Who is affected? What's the evidence? What are the constraints?
-4. PM answers in natural language; Researcher produces a structured problem brief
-5. Spec Writer drafts a full PRD from the brief — including acceptance criteria, edge cases, and non-functional requirements
-6. Critic evaluates the draft against the quality rubric; returns inline feedback on any failing dimensions
-7. Spec Writer revises; Critic re-evaluates only the previously failing dimensions
-8. PM receives the final artifact, reviews, edits if needed, and exports to their doc system
+**Stage 1 — Press Release**
 
-### Building a Roadmap
+1. PM opens [ProductName] and describes the idea in plain language
+2. Orchestrator identifies this as a new Working Backwards session and activates the Press Release Agent
+3. Press Release Agent asks: *"Who specifically is the customer? What problem are they experiencing today? What does success look like for them?"*
+4. PM answers: enterprise admins who need data for compliance audits and currently export records one by one
+5. Press Release Agent drafts a Press Release: headline, problem paragraph, solution paragraph, spokesperson quote, customer quote
+6. PM reviews the draft — the headline is too vague; the customer quote doesn't feel real
+7. Press Release Agent revises; Critic evaluates: customer is specific, problem is evidenced, benefit is clear — **PASS**
+8. Orchestrator unlocks Stage 2
 
-1. PM provides context: team goals, current initiatives, backlog items, strategic priorities
-2. Orchestrator routes to Strategist agent
-3. Strategist asks for constraints (capacity, dependencies, deadlines) then produces a prioritized roadmap with rationale per decision and explicit trade-offs surfaced
-4. Critic reviews for internal consistency, missing dependencies, and goals not covered by any initiative
-5. Revised roadmap returned to PM with a decision log showing what was deprioritized and why
+**Stage 2 — External FAQ**
 
-### Synthesizing User Research
+9. FAQ Agent generates the 6 hardest questions a skeptical enterprise customer would ask about this feature
+10. FAQ Agent drafts initial answers based on the PR context
+11. PM reviews — one question ("How does this handle PII in exported data?") doesn't have a good answer yet
+12. PM notes this is unresolved; FAQ Agent marks it `[OPEN — requires legal review]`
+13. Critic evaluates: all questions answered or explicitly flagged — **PASS**
 
-1. PM pastes or uploads raw research input (interview transcripts, survey data, support tickets)
-2. Orchestrator routes to Researcher agent
-3. Researcher extracts themes, surfaces supporting quotes, identifies gaps, and produces a structured synthesis with confidence levels (high/medium/low) per insight
-4. Critic reviews for unsupported claims or missing user segments
-5. PM receives final synthesis
+**Stage 2 continued — Internal FAQ**
 
-### Writing Stakeholder Communication
+14. FAQ Agent switches to Internal mode, generates the hardest questions from engineering, legal, and leadership
+15. Engineering question: *"What's the expected export volume? Do we need async processing?"* — PM answers with current data
+16. Legal question: *"Does bulk export create GDPR deletion complexity?"* — PM flags as `[OPEN]`
+17. Critic evaluates: substantive answers or explicit flags on all questions — **PASS**
+18. Orchestrator unlocks Stage 3
 
-1. PM specifies the audience (exec, engineering, external customers), context (launch, delay, strategy update), and key message
-2. Orchestrator routes to Communicator agent
-3. Communicator produces a draft calibrated to the audience — depth, format, and tone adjusted accordingly
-4. Critic reviews for clarity, completeness, and appropriate level of detail
-5. PM receives final draft ready to send or publish
+**Stage 3 — Requirements**
+
+19. Requirements Agent reads the validated PR and FAQ and drafts engineering requirements with acceptance criteria, edge cases, and non-functional requirements
+20. Requirements Agent flags two `[OPEN]` items from the FAQ as gaps in the requirements that need resolution before build
+21. Critic evaluates the requirements: acceptance criteria are testable, edge cases are covered, NFRs present — **PASS**
+22. PM receives the complete Working Backwards package — PR, External FAQ, Internal FAQ, Requirements — in markdown
+23. PM exports to their doc system and shares with engineering
 
 ---
 
 ## Requirements
 
-### Requirement 1: Orchestrator Agent
+### Requirement 1: Orchestrator — Pipeline Sequencing
 
-The system must include an Orchestrator agent that receives all user inputs, classifies the task type, and routes to the appropriate worker agent(s).
+The Orchestrator must manage the Working Backwards pipeline, enforce stage order, and route each stage to the correct agent. A PM must not be able to proceed to a later stage until the current stage has received a Critic PASS.
 
 **Acceptance Criteria:**
-- Given a natural language input describing a PM task, the Orchestrator correctly identifies the task type (spec writing, roadmap planning, research synthesis, stakeholder communication) with ≥90% accuracy on a held-out test set
-- Given an ambiguous input that could map to multiple task types, the Orchestrator asks one clarifying question before routing
-- Given a task that spans multiple types (e.g., "write a PRD and a stakeholder update for this feature"), the Orchestrator activates multiple worker agents and sequences them appropriately
-- The Orchestrator must complete task classification and routing within 3 seconds of receiving input
-- The Orchestrator passes structured context to each worker agent including: task type, raw user input, and any clarifications collected
+- Given a new session, the Orchestrator always begins at Stage 1 (Press Release) regardless of what the PM describes
+- Given a Critic PASS on Stage 1, the Orchestrator advances to Stage 2 (External FAQ) and activates the FAQ Agent in External mode
+- Given a Critic PASS on Stage 2 External FAQ, the Orchestrator activates the FAQ Agent in Internal mode
+- Given a Critic PASS on Stage 2 Internal FAQ, the Orchestrator advances to Stage 3 (Requirements) and activates the Requirements Agent
+- Given a Critic FAIL at any stage, the Orchestrator holds at that stage and returns control to the relevant worker agent for revision — it does not advance
+- Given a PM explicitly requesting to skip a stage, the Orchestrator declines and explains why the stage is required
+- The Orchestrator passes the full session context (all prior stage outputs) to each agent it activates
 
 ---
 
-### Requirement 2: Researcher Agent
+### Requirement 2: Press Release Agent
 
-The Researcher agent must synthesize user research inputs and produce structured insight documents. It also provides problem framing support to downstream agents (e.g., Spec Writer).
+The Press Release Agent must help PMs draft a compelling, specific, customer-centric Press Release for their product idea. It must ask clarifying questions until it has enough information to produce a high-quality first draft, and must revise based on Critic feedback.
 
 **Acceptance Criteria:**
-- Given raw input (transcript, survey, ticket dump) of up to 50,000 tokens, the Researcher produces a synthesis containing: (a) top 3-5 themes with supporting evidence, (b) representative quotes per theme, (c) identified gaps or underrepresented user segments, (d) confidence level (high/medium/low) per insight
-- Given a problem description with insufficient evidence, the Researcher explicitly flags this and lists what additional data would strengthen the case — it must not fabricate evidence
-- Given a research task with no input provided, the Researcher asks for source material before proceeding
-- Output is structured markdown, parseable by downstream agents
+- Given a product idea with no customer definition, the Press Release Agent asks for: (a) who specifically is the customer, (b) what problem they experience today, (c) what success looks like for them — before drafting
+- Given sufficient context, the Press Release Agent produces a draft containing all required sections: headline, subheading, problem paragraph, solution paragraph, spokesperson quote, getting-started description, and customer quote
+- Given a Critic FAIL with specific gaps, the Press Release Agent revises only the failing sections — not the full document
+- The Press Release Agent must not write a customer quote that invents specific metrics or outcomes not grounded in PM-provided context; it must use representative language or flag the quote as `[placeholder — replace with real customer quote]`
+- Given a product idea with no clear customer benefit, the Press Release Agent surfaces this explicitly rather than drafting a vague PR: *"I can't write a compelling headline because it's not clear what the customer gets. Let's start there."*
 
 ---
 
-### Requirement 3: Strategist Agent
+### Requirement 3: FAQ Agent
 
-The Strategist agent must produce prioritized roadmaps and strategic framing documents from PM-provided inputs.
+The FAQ Agent must operate in two modes — External (customer questions) and Internal (engineering/leadership/legal questions) — generating hard questions and drafting initial answers from the validated Press Release context.
 
 **Acceptance Criteria:**
-- Given a list of initiatives, team goals, and capacity constraints, the Strategist produces a roadmap with: (a) prioritized initiative list with rationale per item, (b) explicit dependencies flagged, (c) a decision log recording what was deprioritized and why
-- Given conflicting priorities (e.g., two P0 items that can't both fit in a quarter), the Strategist surfaces the conflict explicitly and presents trade-off options — it must not silently resolve conflicts
-- Given a roadmap request with no stated goals, the Strategist asks for success criteria before proceeding
-- Every initiative in the output must reference at least one input goal
+- Given a validated Press Release (Stage 1 PASS), the FAQ Agent in External mode generates 5-8 questions a skeptical target customer would ask, prioritized by the questions most likely to reveal product weaknesses
+- Given a validated Press Release and External FAQ (Stage 2 External PASS), the FAQ Agent in Internal mode generates 5-8 questions from engineering, legal, finance, and leadership, prioritized by the questions most likely to block the build
+- For each question, the FAQ Agent drafts an initial answer using context from the PR and any PM-provided information
+- Given a question the PM cannot answer, the FAQ Agent marks it `[OPEN — owner: X]` rather than drafting a speculative answer
+- The FAQ Agent must not generate softball questions. Each question must represent a genuine challenge to the product's viability, customer definition, or implementation feasibility
+- Given a PM answer that is vague or non-committal, the FAQ Agent flags it: *"This answer doesn't fully resolve the question. Do you want to go deeper or mark it open?"*
 
 ---
 
-### Requirement 4: Spec Writer Agent
+### Requirement 4: Requirements Agent
 
-The Spec Writer agent must produce complete, engineer-ready PRDs from problem briefs or direct PM input.
+The Requirements Agent must translate a validated Working Backwards package (Press Release + External FAQ + Internal FAQ) into engineer-ready requirements. It activates only after all Stage 2 Critic checks have passed.
 
 **Acceptance Criteria:**
-- Given a problem brief, the Spec Writer produces a PRD containing all of: problem statement, success criteria, user journey, requirements with acceptance criteria, scope (in/out), edge cases, and technical requirements
-- Given a requirement that cannot be made testable, the Spec Writer flags it as `[NEEDS CLARIFICATION]` rather than writing vague acceptance criteria
-- Given a feature description with no mentioned constraints, the Spec Writer marks performance, security, and scale targets as `[OPEN]` and notes they require PM input
+- Given a complete validated Working Backwards package, the Requirements Agent produces a requirements document containing: (a) problem statement derived from the PR, (b) success criteria derived from the PR's stated customer benefit, (c) user journey, (d) functional requirements with acceptance criteria, (e) scope (in/out), (f) edge cases, (g) non-functional requirements
 - Each acceptance criterion must follow a given/when/then structure
-- PRD output must be valid markdown importable to standard doc systems
+- Given `[OPEN]` items in the FAQ, the Requirements Agent surfaces them explicitly as `[OPEN]` gaps in the relevant requirements section — it does not silently drop them or draft requirements around unresolved questions
+- Given a requirement that cannot be made testable, the Requirements Agent flags it `[NEEDS CLARIFICATION]` rather than writing vague criteria
+- Requirements output must be valid markdown importable to standard doc systems
 
 ---
 
-### Requirement 5: Communicator Agent
+### Requirement 5: Critic Agent — Stage-Specific Rubrics
 
-The Communicator agent must produce stakeholder-ready communication artifacts calibrated to a specified audience and context.
+The Critic Agent must evaluate outputs at each stage against a rubric specific to that stage. It returns a structured PASS or NEEDS REVISION verdict with inline, actionable feedback.
+
+**Stage 1 — Press Release Rubric:**
 
 **Acceptance Criteria:**
-- Given an audience type, the Communicator adjusts output depth, format, and tone:
-  - Executive: 1-page max, outcomes-focused, no implementation detail
-  - Engineering: Technical context included, decision rationale explicit
-  - External customer: No internal metrics or roadmap specifics, customer-benefit framing only
-- Given a launch announcement context, the output includes: what changed, why it matters to the audience, and what action (if any) is required
-- Given a delay or negative update context, the output leads with the impact and provides a path forward — it must not bury the bad news
-- Output must pass a reading-level check appropriate to the specified audience
+- Given a PR draft, the Critic evaluates: (a) Is the customer defined specifically — not "users" or "enterprises" but a named persona or segment? (b) Is the problem evidenced — with a specific pain, not a general frustration? (c) Is the benefit concrete — does a customer know what they get? (d) Is the spokesperson quote substantive — not generic marketing language? (e) Is the customer quote specific and believable?
+- Given a PR where any dimension fails, the Critic returns NEEDS REVISION with the specific failing dimension(s) and a concrete suggestion per gap
+- Given a PR where all dimensions pass, the Critic returns PASS and a one-sentence summary of what makes this PR strong
+
+**Stage 2 — FAQ Rubric (External and Internal):**
+
+**Acceptance Criteria:**
+- Given an External FAQ, the Critic evaluates: (a) Do the questions represent genuine customer challenges — not softballs? (b) Is every question answered or explicitly marked `[OPEN]`? (c) Are any critical customer concerns missing entirely?
+- Given an Internal FAQ, the Critic evaluates: (a) Do the questions cover engineering feasibility, legal/compliance, and business model? (b) Is every question answered or explicitly `[OPEN]`? (c) Are open items assigned an owner?
+- Given a FAQ where a question's answer is vague or evasive, the Critic flags it as NEEDS REVISION: *"This answer restates the question without resolving it."*
+
+**Stage 3 — Requirements Rubric:**
+
+**Acceptance Criteria:**
+- Given a requirements document, the Critic evaluates: (a) Does every requirement trace back to the PR or FAQ? (b) Can every acceptance criterion be tested? (c) Are edge cases covered? (d) Are non-functional requirements (performance, security, scale) present or explicitly `[OPEN]`? (e) Are all `[OPEN]` items from the FAQ surfaced in the requirements?
+- The Critic must not alter the content of any document — it annotates only
+- The Critic must complete review within 10 seconds for documents up to 5,000 tokens
 
 ---
 
-### Requirement 6: Critic Agent
+### Requirement 6: Quality Rubric Configuration
 
-The Critic agent must review all worker outputs against the quality rubric before any artifact is returned to the user. The Critic is a required pipeline step — no output bypasses it.
-
-**Acceptance Criteria:**
-- Given any PRD draft, the Critic evaluates it against: (a) problem statement clarity and evidence, (b) measurability of success criteria, (c) completeness of acceptance criteria, (d) edge case coverage, (e) presence of non-functional requirements
-- Given a draft that passes all dimensions, the Critic returns it with `PASS` status and no blocking feedback
-- Given a draft with ≥1 failing dimension, the Critic returns `NEEDS REVISION` status with: inline comments citing each gap and a specific suggested fix per gap
-- Given a revised draft, the Critic re-evaluates only the previously failing dimensions — not the full rubric
-- Critic review must complete within 10 seconds for documents up to 5,000 tokens
-- The Critic must not alter the content of the draft — it annotates only
-
----
-
-### Requirement 7: Quality Rubric
-
-The system must maintain a versioned, configurable quality rubric used by the Critic agent.
+The rubrics used by the Critic must be stored as versioned, configurable structured configuration — not hardcoded in the Critic's prompt.
 
 **Acceptance Criteria:**
-- The rubric defines pass/fail criteria for each artifact type: PRD, roadmap, research synthesis, stakeholder communication
-- The rubric is stored as structured configuration (not hardcoded in the Critic prompt) so it can be updated without redeploying the agent
-- Changes to the rubric are versioned; the version used in each Critic review is logged with the output
-- [OPEN] Per-team rubric customization — needed for v1 or deferred to Phase 2?
+- Rubrics for all three stages are defined in structured configuration with explicit pass/fail criteria per dimension
+- Changes to any rubric are versioned; the rubric version used in each Critic review is logged with the output
+- Rubric updates do not require agent redeployment
+- [OPEN] Per-team rubric customization — v1 or Phase 2?
 
 ---
 
 ## Scope
 
 ### In Scope
-- Orchestrator agent with task classification and routing
-- Four worker agents: Researcher, Strategist, Spec Writer, Communicator
-- Critic agent as a required step on all worker outputs
-- Four artifact types: PRDs, roadmaps, research syntheses, stakeholder updates
-- Natural language input — no structured templates required from user
-- Markdown output compatible with common doc systems
+- Orchestrator with stage-gated Working Backwards pipeline (Stage 1 → 2 → 3)
+- Press Release Agent
+- FAQ Agent (External and Internal modes)
+- Requirements Agent
+- Critic Agent with stage-specific rubrics
+- Complete Working Backwards output package in markdown: PR + External FAQ + Internal FAQ + Requirements
+- Natural language input — no templates or forms required
 
 ### Out of Scope (Future)
-- Direct integrations with Notion, Jira, Linear, Confluence — Phase 2
-- Real-time multi-PM collaboration on a single artifact — Phase 2
-- Per-team rubric customization — Phase 2 (pending resolution of open question above)
-- Custom agent personas or org-specific fine-tuning — Phase 3
-- Automated artifact publishing or sending — Phase 3
-- Team-level PM output analytics dashboard — Phase 3
+- Roadmaps, research synthesis, stakeholder communications — the product is Working Backwards, not generic PM tooling
+- Doc system integrations (Notion, Jira, Linear, Confluence) — Phase 2
+- Session persistence and resuming in-progress sessions — Phase 2
+- Per-team rubric customization — Phase 2
+- Analytics and team-level coaching — Phase 3
+- Automated output publishing — Phase 3
 
 ---
 
 ## Edge Cases
 
-- **Incomplete input:** Worker agents must ask for the minimum additional information needed rather than hallucinating context or producing a low-confidence artifact without flagging it
-- **Contradictory inputs:** If user input contains internal contradictions (e.g., "urgent and low priority"), the Orchestrator surfaces the contradiction and asks the PM to resolve it before routing
-- **Very long inputs:** Inputs exceeding a worker agent's effective context must be chunked; the agent notes that chunking occurred and flags any loss of continuity
-- **Critic loop:** If Spec Writer and Critic cycle more than 3 times without reaching PASS, the system returns the best available draft with a note explaining the unresolved issues — it does not loop indefinitely
-- **Ambiguous task type:** If the Orchestrator cannot classify with confidence, it presents the top 2 classifications and asks the PM to confirm
-- **Empty research input:** The Researcher must not generate synthetic data. If input is insufficient, it returns a structured gap analysis of what data is missing and how to collect it
+- **PM tries to skip a stage:** Orchestrator declines and explains the stage's purpose — it does not route around the pipeline
+- **Press Release can't be made compelling after 3 revision cycles:** System surfaces this explicitly: *"After multiple revisions, the PR is not passing the customer-definition and problem-evidence checks. This may indicate the idea needs more customer research before a Working Backwards process can succeed."* Returns the best draft with a summary of unresolved gaps
+- **FAQ generates a question the PM explicitly refuses to answer:** The FAQ Agent marks it `[OPEN — PM declined to answer]` and the Critic notes it as a risk in the Stage 2 review — it does not block progress but makes the gap visible
+- **PM provides a pre-written Press Release:** Press Release Agent validates it against the Stage 1 rubric directly rather than starting from scratch — skips the drafting process, not the validation process
+- **Internal FAQ reveals a build-blocking issue (e.g., legal risk):** The Requirements Agent surfaces it as a `[BLOCKER — requires resolution before build]` item — it does not draft requirements that assume the blocker is resolved
+- **Very long input (e.g., pasting a long research document):** The relevant agent processes up to 50,000 tokens and notes if input was truncated — it does not silently ignore content
 
 ---
 
 ## Technical Requirements
 
-- **Latency:** End-to-end artifact generation must complete within 60 seconds for standard inputs (≤2,000 token input, ≤5,000 token output)
+- **Latency:** Each stage (agent output + Critic review) must complete within 30 seconds for standard inputs; full pipeline (all three stages, no revision cycles) must complete within 90 seconds
 - **Model:** Built on Claude via the Anthropic SDK; `claude-opus-4-6` for Critic and Orchestrator, `claude-sonnet-4-6` acceptable for worker agents
-- **Agent communication:** Structured message passing between agents (not raw text); each message must include: sender identity, task context, artifact content, and metadata (version, timestamp)
-- **Statelessness:** Each request must be completable in a single agent session; no cross-session state required for v1
-- **Observability:** Each agent invocation must be logged with: agent name, input token count, output token count, latency, and Critic pass/fail result
-- **API key management:** User-provided Anthropic API key; the system must not store keys beyond the session
-- **Rate limiting:** Anthropic API rate limit errors must surface a user-facing message — no silent failures
+- **Agent communication:** Structured message passing between agents (not raw text); each message includes: stage identifier, prior stage outputs, current artifact, and Critic review history
+- **Session context:** Full prior-stage outputs must be available to every downstream agent — the Requirements Agent must have the complete PR and FAQ when generating requirements
+- **Statelessness:** Each full pipeline run is completable in a single session for v1; no cross-session persistence required
+- **Observability:** Each agent invocation logged with: agent name, stage, input/output token counts, latency, Critic pass/fail, and revision cycle count
+- **API key management:** User-provided Anthropic API key; not stored beyond the session
+- **Rate limiting:** Anthropic API rate limit errors must surface a user-facing message with a suggested retry time — no silent failures
 
 ---
 
 ## Technical Context
 
-- The system will be built using the Anthropic SDK (Python or TypeScript) with multi-agent orchestration
-- Claude tool use and structured outputs should be used for agent-to-agent communication and rubric evaluation — not freeform prose passing
-- The Critic's rubric should be implemented as a tool call with a defined JSON schema to enable consistent, parseable feedback
-- MCP tools may be used for document I/O but are not required for v1
-- [OPEN] Orchestrator routing strategy: model-based classifier (accurate, ~1s added latency) vs. rule-based keyword matching (fast, brittle on ambiguous inputs)
+- Built on the Anthropic SDK (Python or TypeScript) using multi-agent orchestration
+- Claude tool use and structured outputs should be used for Critic rubric evaluation — not freeform prose — to produce consistent, parseable verdicts
+- Stage outputs (PR, FAQ, Requirements) should be stored as structured objects in the session, not raw strings, to enable clean context passing between agents
+- The stage-gate logic lives in the Orchestrator, not in the individual agents — agents produce and revise; the Orchestrator controls flow
+- MCP tools may be used for document I/O in Phase 2 but are not required for v1
+- [OPEN] Orchestrator routing: model-based stage classification vs. explicit state machine. A state machine is simpler and more predictable for a fixed pipeline — likely the right call here.
 
 ---
 
 ## Open Questions
 
-- [OPEN] Per-team rubric customization — v1 or Phase 2?
-- [OPEN] Input UX — CLI, web UI, or API-only for v1? Biggest single lever on adoption trajectory.
-- [OPEN] Orchestrator routing: model classifier vs. rule-based? Trade-off: accuracy vs. latency.
-- [OPEN] Baseline measurement: how do we capture a "before" quality score on existing PM artifacts before launch, so the 80% success criterion is meaningful?
-- [OPEN] First 3 launch teams — who are they? Ideal profile: 5-15 PMs, existing PRD quality pain, internal champion.
+- [OPEN] Per-team Critic rubric customization — v1 or Phase 2?
+- [OPEN] Input UX — CLI, web UI, or API-only for v1? Biggest single lever on adoption.
+- [OPEN] Session persistence — can a PM pause and resume a Working Backwards session? Required for the 90-minute target use case. May need to be v1 scope.
+- [OPEN] First 3 launch teams — who are they? Ideal profile: already familiar with Working Backwards, frustrated by inconsistent execution, has an internal champion.
 - [OPEN] Business model — separate decision, not in scope for this PRD.
-- [RESOLVED 2026-03-07] Agent architecture — Orchestrator + worker agents + Critic review loop, over alternatives (pure orchestrator, single agent with critique, specialized role agents without orchestrator).
+- [RESOLVED 2026-03-08] Methodology scope — strict Working Backwards pipeline (PR → FAQ → Requirements) rather than broader PM tooling. The product is opinionated by design.
+- [RESOLVED 2026-03-07] Agent architecture — Orchestrator + specialized agents + Critic review loop, over single-model or generic PM assistant approaches.
 
 ---
 
@@ -335,5 +335,6 @@ The system must maintain a versioned, configurable quality rubric used by the Cr
 
 - [Anthropic SDK documentation]
 - [Claude model capabilities and context windows]
-- [OPEN] Competitive analysis: Notion AI, Atlassian Intelligence, Glean, Product Board AI
-- [OPEN] User research / PM team interview notes
+- [Working Backwards by Colin Bryar and Bill Carr — source methodology]
+- [OPEN] Competitive analysis: Notion AI, Atlassian Intelligence, Amazon internal WB tooling (if publicly documented)
+- [OPEN] User research / PM team interviews
