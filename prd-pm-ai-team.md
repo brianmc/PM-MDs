@@ -277,7 +277,7 @@ The rubrics used by the Critic must be stored as versioned, configurable structu
 ### Out of Scope (Future)
 - Roadmaps, research synthesis, stakeholder communications — the product is Working Backwards, not generic PM tooling
 - Doc system integrations (Notion, Jira, Linear, Confluence) — Phase 2
-- Session persistence and resuming in-progress sessions — Phase 2
+- Doc system integrations beyond GitHub (Notion, Confluence, Linear) — Phase 2
 - Per-team rubric customization — Phase 2
 - Analytics and team-level coaching — Phase 3
 - Automated output publishing — Phase 3
@@ -292,6 +292,9 @@ The rubrics used by the Critic must be stored as versioned, configurable structu
 - **PM provides a pre-written Press Release:** Press Release Agent validates it against the Stage 1 rubric directly rather than starting from scratch — skips the drafting process, not the validation process
 - **Internal FAQ reveals a build-blocking issue (e.g., legal risk):** The Requirements Agent surfaces it as a `[BLOCKER — requires resolution before build]` item — it does not draft requirements that assume the blocker is resolved
 - **Very long input (e.g., pasting a long research document):** The relevant agent processes up to 50,000 tokens and notes if input was truncated — it does not silently ignore content
+- **Resuming an in-progress session:** When a PM returns to a session, the Orchestrator reads the current state from GitHub (which files exist, which Critic reviews have passed) and resumes at the correct stage — it does not restart the pipeline from Stage 1
+- **GitHub repo not accessible:** If the configured repo cannot be reached at session start, the system surfaces an error before the PM begins work — it does not allow a session to proceed without a confirmed persistence target
+- **Concurrent edits to session files:** If a session file has been manually edited in GitHub since the last agent write, the Orchestrator surfaces a conflict warning and asks the PM to confirm which version to proceed from
 
 ---
 
@@ -301,7 +304,8 @@ The rubrics used by the Critic must be stored as versioned, configurable structu
 - **Model:** Built on Claude via the Anthropic SDK; `claude-opus-4-6` for Critic and Orchestrator, `claude-sonnet-4-6` acceptable for worker agents
 - **Agent communication:** Structured message passing between agents (not raw text); each message includes: stage identifier, prior stage outputs, current artifact, and Critic review history
 - **Session context:** Full prior-stage outputs must be available to every downstream agent — the Requirements Agent must have the complete PR and FAQ when generating requirements
-- **Statelessness:** Each full pipeline run is completable in a single session for v1; no cross-session persistence required
+- **Persistence:** Every stage output (PR draft, FAQ, Requirements) must be committed to the configured GitHub repository after each Critic PASS. Session state (current stage, revision history, Critic verdicts) must be stored in a `session.json` file in the same repo. A PM must be able to close and resume a session with no loss of progress.
+- **GitHub integration:** The system requires a configured GitHub repo and token at session start. It uses the GitHub API to read, write, and commit files. It must not buffer stage outputs in memory only — each PASS triggers an immediate commit.
 - **Observability:** Each agent invocation logged with: agent name, stage, input/output token counts, latency, Critic pass/fail, and revision cycle count
 - **API key management:** User-provided Anthropic API key; not stored beyond the session
 - **Rate limiting:** Anthropic API rate limit errors must surface a user-facing message with a suggested retry time — no silent failures
@@ -312,10 +316,21 @@ The rubrics used by the Critic must be stored as versioned, configurable structu
 
 - Built on the Anthropic SDK (Python or TypeScript) using multi-agent orchestration
 - Claude tool use and structured outputs should be used for Critic rubric evaluation — not freeform prose — to produce consistent, parseable verdicts
-- Stage outputs (PR, FAQ, Requirements) should be stored as structured objects in the session, not raw strings, to enable clean context passing between agents
+- Stage outputs (PR, FAQ, Requirements) are stored as structured objects in session state and committed to GitHub as markdown files after each PASS — not raw strings passed between agents in memory only
 - The stage-gate logic lives in the Orchestrator, not in the individual agents — agents produce and revise; the Orchestrator controls flow
-- MCP tools may be used for document I/O in Phase 2 but are not required for v1
-- [OPEN] Orchestrator routing: model-based stage classification vs. explicit state machine. A state machine is simpler and more predictable for a fixed pipeline — likely the right call here.
+- Session state is stored as `session.json` in the GitHub repo alongside the artifact files; it records: current stage, revision counts per stage, Critic verdicts, and `[OPEN]` item count per stage
+- Suggested repo structure per Working Backwards session:
+  ```
+  /working-backwards/
+    {session-id}/
+      press-release.md        ← committed on Stage 1 PASS
+      faq-external.md         ← committed on Stage 2 External PASS
+      faq-internal.md         ← committed on Stage 2 Internal PASS
+      requirements.md         ← committed on Stage 3 PASS
+      session.json            ← updated after every agent interaction
+  ```
+- The GitHub MCP server (or GitHub REST API) should be used for all repo operations — reading, writing, and committing files
+- [RESOLVED 2026-03-08] Orchestrator routing: explicit state machine over model-based classifier. A fixed pipeline with known stages maps cleanly to a state machine — simpler, more predictable, easier to debug.
 
 ---
 
@@ -323,7 +338,7 @@ The rubrics used by the Critic must be stored as versioned, configurable structu
 
 - [OPEN] Per-team Critic rubric customization — v1 or Phase 2?
 - [OPEN] Input UX — CLI, web UI, or API-only for v1? Biggest single lever on adoption.
-- [OPEN] Session persistence — can a PM pause and resume a Working Backwards session? Required for the 90-minute target use case. May need to be v1 scope.
+- [RESOLVED 2026-03-08] Session persistence — all stage outputs and session state are persisted to a GitHub repository after each Critic PASS. GitHub is the only supported persistence target for v1. PMs must configure a repo and token at session start.
 - [OPEN] First 3 launch teams — who are they? Ideal profile: already familiar with Working Backwards, frustrated by inconsistent execution, has an internal champion.
 - [OPEN] Business model — separate decision, not in scope for this PRD.
 - [RESOLVED 2026-03-08] Methodology scope — strict Working Backwards pipeline (PR → FAQ → Requirements) rather than broader PM tooling. The product is opinionated by design.
